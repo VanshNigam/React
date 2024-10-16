@@ -66,16 +66,16 @@ function Right({ isLogin, setIsLogin }) {
     <div>
       <div className="flex items-center justify-center  pt-[73px] w-[calc(100vw-560px)]">
         <img src={Logo} alt="Logo" className="w-[98px] h-[98px] ml-[90px]" />
-        <div className="headingWrapper flex items-center pl-[160px] size-full text-2xl cursor-pointer">
+        <div className="headingWrapper flex items-center  pl-[160px] size-full text-3xl cursor-pointer">
           <h1
-            className={!isLogin ? "font-semibold " : "text-slate-400"}
+            className={!isLogin ? "font-bold " : "text-slate-400"}
             onClick={() => {
               setIsLogin(false);
             }}
           >
             Sign Up
           </h1>
-          <p>/</p>
+          <p className="ml-4 mr-4 font-semibold text-4xl text-gray-300"> / </p>
           <h1
             className={isLogin ? "font-semibold" : "text-slate-400"}
             onClick={() => {
@@ -90,8 +90,8 @@ function Right({ isLogin, setIsLogin }) {
       </div>
 
       {!isLogin && (
-        <div className="signup-form-field">
-          <div className="flex ml-[90px]  text-lg">
+        <div className="signup-form-field ">
+          <div className="flex ml-[60px]  text-lg">
             <div className="w-[390px] flex flex-col">
               <input
                 type="text"
@@ -203,12 +203,12 @@ function Right({ isLogin, setIsLogin }) {
 
       {isLogin && (
         <form className="login-form-field  ">
-          <div className="shadow-2xl mt-[80px] flex  flex-col justify-center items-center w-[500px] pb-[140px] rounded-2xl ml-[160px] p-[34px]">
+          <div className="shadow-2xl mt-[80px] border-l-2 border-t-2 border-gray-300 flex  flex-col  w-[500px]  pb-[140px] rounded-3xl ml-[160px] p-[34px]">
             <div className="top">
-              <h1 className="text-center text-2xl font-semibold">Welcome to Sicu-aura</h1>
-              <p className="text-slate-400 mt-4">Your one stop safety solutions using innovative technology</p>
+              <h1 className="text-center text-2xl font-semibold ">Welcome to Sicu-aura</h1>
+              <p className="text-gray-400 mt-4 text-center text-sm">Your one stop safety solutions using innovative technology</p>
             </div>
-            <div className="fields">
+            <div className="fields w-[300px] m-auto">
               <input
                 type="text"
                 placeholder="Hospital Name"
@@ -217,19 +217,19 @@ function Right({ isLogin, setIsLogin }) {
               />
               <input
                 type="text"
-                placeholder="Hospital Name"
+                placeholder="Email Id"
                 className={`w-[320px] h-[32px] mt-[50px] ${hospitalNameClass} p-2`} // Added padding
                 onClick={() => handleInputClick(setHospitalNameClass)}
               />
               <input
                 type="text"
-                placeholder="Hospital Name"
+                placeholder="Password"
                 className={`w-[320px] h-[32px] mt-[50px] ${hospitalNameClass} p-2`} // Added padding
                 onClick={() => handleInputClick(setHospitalNameClass)}
               />
               <input
                 type="text"
-                placeholder="Hospital Name"
+                placeholder="Special Access Code"
                 className={`w-[320px] h-[32px] mt-[50px] ${hospitalNameClass} p-2`} // Added padding
                 onClick={() => handleInputClick(setHospitalNameClass)}
               />
